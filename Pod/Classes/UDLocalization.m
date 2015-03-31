@@ -16,7 +16,17 @@ static NSString *LocalizedStringsTableName = @"UDLocalized";
 
 static NSString *GetLocalizedString(NSString *key) {
     if (![key isKindOfClass:[NSString class]]) return key;
-    return NSLocalizedStringFromTable(key, LocalizedStringsTableName, nil);
+    NSString *localized = NSLocalizedStringFromTable(key, LocalizedStringsTableName, nil);
+    if ([localized hasPrefix:@"r/"]) {
+        NSString *nextKey = [localized substringFromIndex:2];
+        NSString *nextLocalized = GetLocalizedString(nextKey);
+        if ([nextLocalized isEqualToString:nextKey]) {
+            return localized;
+        } else {
+            return nextLocalized;
+        }
+    }
+    return localized;
 }
 
 #pragma mark - Swizzling
