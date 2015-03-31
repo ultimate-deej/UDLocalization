@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'UDLocalization', :exclusive => true do
+  pod "UDLocalization", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
