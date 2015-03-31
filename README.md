@@ -1,9 +1,6 @@
 # UDLocalization
 
-[![CI Status](http://img.shields.io/travis/Maxim Naumov/UDLocalization.svg?style=flat)](https://travis-ci.org/Maxim Naumov/UDLocalization)
-[![Version](https://img.shields.io/cocoapods/v/UDLocalization.svg?style=flat)](http://cocoapods.org/pods/UDLocalization)
-[![License](https://img.shields.io/cocoapods/l/UDLocalization.svg?style=flat)](http://cocoapods.org/pods/UDLocalization)
-[![Platform](https://img.shields.io/cocoapods/p/UDLocalization.svg?style=flat)](http://cocoapods.org/pods/UDLocalization)
+[![CI Status](http://img.shields.io/travis/ultimate-deej/UDLocalization.svg?style=flat)](https://travis-ci.org/ultimate-deej/UDLocalization)
 
 ## Usage
 
@@ -17,7 +14,7 @@ UDLocalization is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "UDLocalization"
+pod "UDLocalization", :git => 'https://github.com/ultimate-deej/UDLocalization.git'
 ```
 
 ## Author
