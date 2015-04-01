@@ -5,8 +5,6 @@
 @property(nonatomic) NSBundle *bundle;
 @property(nonatomic) NSString *tableName;
 
-- (instancetype)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName NS_DESIGNATED_INITIALIZER;
-
 @end
 
 @implementation UDLocalization
@@ -55,6 +53,10 @@
 
 + (instancetype)localizationWithLanguage:(NSString *)language tableName:(NSString *)tableName {
     return [[self alloc] initWithLanguage:language tableName:tableName];
+}
+
++ (instancetype)localizationWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
+    return [[self alloc] initWithBundle:bundle tableName:tableName];
 }
 
 - (NSString *)localizedString:(NSString *)key {

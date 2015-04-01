@@ -46,6 +46,13 @@ describe(@"-localizedString:", ^{
                 @"test key" : @"test key",
         });
     });
+
+    context(@"when explicit bundle is being used", ^{
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithBundle:[NSBundle bundleForClass:[UDLocalization class]] tableName:@"Custom"],
+                @"test key" : @"custom file value",
+        });
+    });
 });
 
 SpecEnd
