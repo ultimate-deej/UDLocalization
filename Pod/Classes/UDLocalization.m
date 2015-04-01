@@ -52,7 +52,7 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle, NSString *t
 }
 
 - (NSString *)localizedString:(NSString *)key {
-    return GetLocalizedString(key, self.bundle, self.tableName);
+    return GetLocalizedString(key, _bundle, _tableName);
 }
 
 @end
