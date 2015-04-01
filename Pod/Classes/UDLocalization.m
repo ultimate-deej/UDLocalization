@@ -1,14 +1,5 @@
 #import "UDLocalization.h"
 
-#pragma mark Localizing
-
-static NSString *GetLocalizedString(NSString *key, NSBundle *bundle, NSString *tableName) {
-    if (![key isKindOfClass:[NSString class]]) return key;
-    return [bundle localizedStringForKey:key value:nil table:tableName];
-}
-
-#pragma mark - Class
-
 @interface UDLocalization ()
 
 @property(nonatomic) NSBundle *bundle;
@@ -49,7 +40,7 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle, NSString *t
 }
 
 - (NSString *)localizedString:(NSString *)key {
-    return GetLocalizedString(key, _bundle, _tableName);
+    return [_bundle localizedStringForKey:key value:nil table:_tableName];
 }
 
 @end
