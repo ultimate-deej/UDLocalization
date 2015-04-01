@@ -15,7 +15,7 @@ sharedExamplesFor(@"-localizedString:", ^(NSDictionary *data) {
 describe(@"-localizedString:", ^{
     itShouldBehaveLike(@"-localizedString:", @{
             @"instance" : [UDLocalization localization],
-            @"test key" : @"test value",
+            @"test key" : @"english test value", // Not sure why it uses English by default
     });
 
     context(@"custom strings table", ^{
