@@ -1,6 +1,6 @@
 #import <UDLocalization.h>
 
-SpecBegin(LocalizableStrings)
+SpecBegin(UDLocalization)
 
 UDLocalization *localization = [UDLocalization new];
 
