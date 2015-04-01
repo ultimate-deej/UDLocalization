@@ -11,7 +11,7 @@ static NSString *GetLocalizedString(NSString *key) {
 
 @implementation UDLocalization
 
-+ (NSString *)localizedString:(NSString *)key {
+- (NSString *)localizedString:(NSString *)key {
     return GetLocalizedString(key);
 }
 

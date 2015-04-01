@@ -1,5 +1,5 @@
 @interface UDLocalization : NSObject
 
-+ (NSString *)localizedString:(NSString *)key;
+- (NSString *)localizedString:(NSString *)key;
 
 @end
