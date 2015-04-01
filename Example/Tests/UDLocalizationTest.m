@@ -18,6 +18,14 @@ describe(@"-localizedString:", ^{
             @"test key" : @"test value",
             @"not localized key" : @"not localized key",
     });
+
+    context(@"custom strings table", ^{
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithTableName:@"Custom"],
+                @"test key" : @"custom file value",
+                @"not localized key" : @"not localized key",
+        });
+    });
 });
 
 SpecEnd

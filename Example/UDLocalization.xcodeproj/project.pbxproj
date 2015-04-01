@@ -12,6 +12,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6EEEA5715328CF1DA63A96DF /* libPods-UDLocalization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEB10007CD2C43D431BB953 /* libPods-UDLocalization.a */; };
+		CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4642E61ACC3E35000CB831 /* Custom.strings */; };
 		CEF451451ACA9C0700020217 /* UDLocalizationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF451441ACA9C0700020217 /* UDLocalizationTest.m */; };
 		CEF451471ACAA19100020217 /* UDLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF451461ACAA19100020217 /* UDLocalizable.strings */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		83E6FEA196CE78923CC77757 /* Pods-UDLocalization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDLocalization.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDLocalization/Pods-UDLocalization.release.xcconfig"; sourceTree = "<group>"; };
 		B040856E8987EFBF464684A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CE4642E61ACC3E35000CB831 /* Custom.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Custom.strings; sourceTree = "<group>"; };
 		CEF451441ACA9C0700020217 /* UDLocalizationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDLocalizationTest.m; sourceTree = "<group>"; };
 		CEF451461ACAA19100020217 /* UDLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = UDLocalizable.strings; sourceTree = "<group>"; };
 		F4747D03C17D73213F7522D2 /* Pods-UDLocalization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDLocalization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDLocalization/Pods-UDLocalization.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				CEF451441ACA9C0700020217 /* UDLocalizationTest.m */,
 				CEF451461ACAA19100020217 /* UDLocalizable.strings */,
+				CE4642E61ACC3E35000CB831 /* Custom.strings */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -184,6 +187,7 @@
 			files = (
 				CEF451471ACAA19100020217 /* UDLocalizable.strings in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
