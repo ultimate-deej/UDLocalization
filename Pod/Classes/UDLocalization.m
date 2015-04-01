@@ -26,6 +26,10 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle) {
     return self;
 }
 
++ (instancetype)localization {
+    return [[self alloc] init];
+}
+
 - (NSString *)localizedString:(NSString *)key {
     return GetLocalizedString(key, self.bundle);
 }

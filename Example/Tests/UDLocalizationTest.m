@@ -2,14 +2,21 @@
 
 SpecBegin(UDLocalization)
 
-UDLocalization *localization = [UDLocalization new];
-
-describe(@"localizedString:", ^{
+sharedExamplesFor(@"-localizedString:", ^(NSDictionary *data) {
+    UDLocalization *localization = data[@"instance"];
     it(@"should localize string", ^{
-        expect([localization localizedString:@"test key"]).to.equal(@"test value");
+        expect([localization localizedString:@"test key"]).to.equal(data[@"test key"]);
     });
     it(@"should not modify non-localized strings", ^{
-        expect([localization localizedString:@"not localized key"]).to.equal(@"not localized key");
+        expect([localization localizedString:@"not localized key"]).to.equal(data[@"not localized key"]);
+    });
+});
+
+describe(@"-localizedString:", ^{
+    itShouldBehaveLike(@"-localizedString:", @{
+            @"instance" : [UDLocalization localization],
+            @"test key" : @"test value",
+            @"not localized key" : @"not localized key",
     });
 });
 
