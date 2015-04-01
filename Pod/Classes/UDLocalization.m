@@ -19,6 +19,16 @@
     return [self initWithBundle:nil tableName:tableName];
 }
 
+- (instancetype)initWithLanguage:(NSString *)language {
+    return [self initWithLanguage:language tableName:nil];
+}
+
+- (instancetype)initWithLanguage:(NSString *)language tableName:(NSString *)tableName {
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:language ofType:@"lproj"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    return [self initWithBundle:bundle tableName:tableName];
+}
+
 - (instancetype)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
     self = [super init];
     if (self) {
@@ -37,6 +47,14 @@
 
 + (instancetype)localizationWithTableName:(NSString *)tableName {
     return [[self alloc] initWithTableName:tableName];
+}
+
++ (instancetype)localizationWithLanguage:(NSString *)language {
+    return [[self alloc] initWithLanguage:language];
+}
+
++ (instancetype)localizationWithLanguage:(NSString *)language tableName:(NSString *)tableName {
+    return [[self alloc] initWithLanguage:language tableName:tableName];
 }
 
 - (NSString *)localizedString:(NSString *)key {

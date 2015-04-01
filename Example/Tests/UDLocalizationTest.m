@@ -24,6 +24,28 @@ describe(@"-localizedString:", ^{
                 @"test key" : @"custom file value",
         });
     });
+
+    context(@"custom language", ^{
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithLanguage:@"Base"],
+                @"test key" : @"test value",
+        });
+    });
+
+    context(@"custom language and table", ^{
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithLanguage:@"ru" tableName:@"OnlyRu"],
+                @"test key" : @"pseudo russian",
+        });
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithLanguage:@"Base" tableName:@"OnlyRu"],
+                @"test key" : @"test key",
+        });
+        itShouldBehaveLike(@"-localizedString:", @{
+                @"instance" : [UDLocalization localizationWithLanguage:nil tableName:@"OnlyRu"],
+                @"test key" : @"test key",
+        });
+    });
 });
 
 SpecEnd

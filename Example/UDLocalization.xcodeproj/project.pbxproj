@@ -14,6 +14,7 @@
 		6EEEA5715328CF1DA63A96DF /* libPods-UDLocalization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEB10007CD2C43D431BB953 /* libPods-UDLocalization.a */; };
 		CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4642E61ACC3E35000CB831 /* Custom.strings */; };
 		CE4642F01ACC9FF5000CB831 /* UDLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4642F21ACC9FF5000CB831 /* UDLocalizable.strings */; };
+		CEB5E6391ACCB4F8003C2F94 /* OnlyRu.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */; };
 		CEF451451ACA9C0700020217 /* UDLocalizationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF451441ACA9C0700020217 /* UDLocalizationTest.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		CE4642E61ACC3E35000CB831 /* Custom.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Custom.strings; sourceTree = "<group>"; };
 		CE4642F51ACCA058000CB831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/UDLocalizable.strings; sourceTree = "<group>"; };
 		CE4642FA1ACCA98F000CB831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UDLocalizable.strings; sourceTree = "<group>"; };
+		CEB5E63C1ACCB502003C2F94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/OnlyRu.strings; sourceTree = "<group>"; };
 		CEF451441ACA9C0700020217 /* UDLocalizationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDLocalizationTest.m; sourceTree = "<group>"; };
 		F4747D03C17D73213F7522D2 /* Pods-UDLocalization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDLocalization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDLocalization/Pods-UDLocalization.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				CEF451441ACA9C0700020217 /* UDLocalizationTest.m */,
 				CE4642F21ACC9FF5000CB831 /* UDLocalizable.strings */,
 				CE4642E61ACC3E35000CB831 /* Custom.strings */,
+				CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -170,6 +173,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
@@ -189,6 +193,7 @@
 				CE4642F01ACC9FF5000CB831 /* UDLocalizable.strings in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 				CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */,
+				CEB5E6391ACCB4F8003C2F94 /* OnlyRu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +259,14 @@
 				CE4642FA1ACCA98F000CB831 /* en */,
 			);
 			name = UDLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB5E63C1ACCB502003C2F94 /* ru */,
+			);
+			name = OnlyRu.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
