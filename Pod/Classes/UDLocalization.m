@@ -14,23 +14,27 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle, NSString *t
 @property(nonatomic) NSBundle *bundle;
 @property(nonatomic) NSString *tableName;
 
+- (instancetype)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName NS_DESIGNATED_INITIALIZER;
+
 @end
 
 @implementation UDLocalization
 
 - (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self initializeWithBundle:nil tableName:nil];
-    }
-
-    return self;
+    return [self initWithBundle:nil tableName:nil];
 }
 
 - (instancetype)initWithTableName:(NSString *)tableName {
+    return [self initWithBundle:nil tableName:tableName];
+}
+
+- (instancetype)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
     self = [super init];
     if (self) {
-        [self initializeWithBundle:nil tableName:tableName];
+        if (bundle == nil) bundle = [NSBundle bundleForClass:[self class]];
+        if (tableName == nil) tableName = @"UDLocalizable";
+        _bundle = bundle;
+        _tableName = tableName;
     }
 
     return self;
@@ -42,13 +46,6 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle, NSString *t
 
 + (instancetype)localizationWithTableName:(NSString *)tableName {
     return [[self alloc] initWithTableName:tableName];
-}
-
-- (void)initializeWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
-    if (bundle == nil) bundle = [NSBundle bundleForClass:[self class]];
-    if (tableName == nil) tableName = @"UDLocalizable";
-    _bundle = bundle;
-    _tableName = tableName;
 }
 
 - (NSString *)localizedString:(NSString *)key {

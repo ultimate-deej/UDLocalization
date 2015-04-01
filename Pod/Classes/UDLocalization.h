@@ -1,8 +1,8 @@
 @interface UDLocalization : NSObject
 
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
+- (instancetype)init;
 
-- (instancetype)initWithTableName:(NSString *)tableName NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTableName:(NSString *)tableName;
 
 + (instancetype)localization;
 
