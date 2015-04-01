@@ -17,11 +17,13 @@ static NSString *GetLocalizedString(NSString *key, NSBundle *bundle) {
 
 @implementation UDLocalization
 
-- (NSBundle *)bundle {
-    if (_bundle == nil) {
+- (instancetype)init {
+    self = [super init];
+    if (self) {
         _bundle = [NSBundle bundleForClass:[self class]];
     }
-    return _bundle;
+
+    return self;
 }
 
 - (NSString *)localizedString:(NSString *)key {
