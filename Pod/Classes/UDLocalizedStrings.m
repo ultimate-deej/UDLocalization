@@ -1,13 +1,13 @@
-#import "UDLocalization.h"
+#import "UDLocalizedStrings.h"
 
-@interface UDLocalization ()
+@interface UDLocalizedStrings ()
 
 @property(nonatomic) NSBundle *bundle;
 @property(nonatomic) NSString *tableName;
 
 @end
 
-@implementation UDLocalization
+@implementation UDLocalizedStrings
 
 - (instancetype)init {
     return [self initWithBundle:nil tableName:nil];
@@ -39,23 +39,23 @@
     return self;
 }
 
-+ (instancetype)localization {
++ (instancetype)localizedStrings {
     return [[self alloc] init];
 }
 
-+ (instancetype)localizationWithTableName:(NSString *)tableName {
++ (instancetype)localizedStringsWithTableName:(NSString *)tableName {
     return [[self alloc] initWithTableName:tableName];
 }
 
-+ (instancetype)localizationWithLanguage:(NSString *)language {
++ (instancetype)localizedStringsWithLanguage:(NSString *)language {
     return [[self alloc] initWithLanguage:language];
 }
 
-+ (instancetype)localizationWithLanguage:(NSString *)language tableName:(NSString *)tableName {
++ (instancetype)localizedStringsWithLanguage:(NSString *)language tableName:(NSString *)tableName {
     return [[self alloc] initWithLanguage:language tableName:tableName];
 }
 
-+ (instancetype)localizationWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
++ (instancetype)localizedStringsWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName {
     return [[self alloc] initWithBundle:bundle tableName:tableName];
 }
 
