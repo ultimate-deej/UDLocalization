@@ -1,4 +1,4 @@
-#import <UDLocalizedStrings.h>
+#import <UDLocalization.h>
 
 SpecBegin(UDLocalizedStrings)
 
