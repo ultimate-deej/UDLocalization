@@ -6,7 +6,7 @@
 
 - (instancetype)init;
 
-- (instancetype)initWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings;
+- (instancetype)initWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings NS_DESIGNATED_INITIALIZER;
 
 + (instancetype)methodLocalization;
 
