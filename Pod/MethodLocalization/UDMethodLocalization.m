@@ -25,6 +25,7 @@ static SEL SentinelKey(SEL sel) {
 - (instancetype)initWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings {
     self = [super init];
     if (self) {
+        if (localizedStrings == nil) localizedStrings = [UDLocalizedStrings localizedStrings];
         _localizedStrings = localizedStrings;
     }
 
