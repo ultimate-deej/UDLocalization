@@ -22,6 +22,10 @@ static SEL SentinelKey(SEL sel) {
     Sentinel = [[NSObject alloc] init];
 }
 
+- (instancetype)init {
+    return [self initWithLocalizedStrings:nil];
+}
+
 - (instancetype)initWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings {
     self = [super init];
     if (self) {
@@ -30,6 +34,10 @@ static SEL SentinelKey(SEL sel) {
     }
 
     return self;
+}
+
++ (instancetype)methodLocalization {
+    return [[self alloc] init];
 }
 
 + (instancetype)methodLocalizationWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings {

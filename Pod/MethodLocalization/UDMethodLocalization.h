@@ -4,7 +4,11 @@
 
 @interface UDMethodLocalization : NSObject
 
+- (instancetype)init;
+
 - (instancetype)initWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings;
+
++ (instancetype)methodLocalization;
 
 + (instancetype)methodLocalizationWithLocalizedStrings:(UDLocalizedStrings *)localizedStrings;
 
