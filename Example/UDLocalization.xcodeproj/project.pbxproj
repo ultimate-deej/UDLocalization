@@ -12,6 +12,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6EEEA5715328CF1DA63A96DF /* libPods-UDLocalization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEB10007CD2C43D431BB953 /* libPods-UDLocalization.a */; };
+		CE3A93C01ACDFDCB003957F3 /* UDMethodLocalizationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A93BF1ACDFDCB003957F3 /* UDMethodLocalizationTest.m */; };
 		CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4642E61ACC3E35000CB831 /* Custom.strings */; };
 		CE4642F01ACC9FF5000CB831 /* UDLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4642F21ACC9FF5000CB831 /* UDLocalizable.strings */; };
 		CEB5E6391ACCB4F8003C2F94 /* OnlyRu.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */; };
@@ -33,6 +34,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		83E6FEA196CE78923CC77757 /* Pods-UDLocalization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDLocalization.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDLocalization/Pods-UDLocalization.release.xcconfig"; sourceTree = "<group>"; };
 		B040856E8987EFBF464684A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CE3A93BF1ACDFDCB003957F3 /* UDMethodLocalizationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDMethodLocalizationTest.m; sourceTree = "<group>"; };
 		CE4642E61ACC3E35000CB831 /* Custom.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Custom.strings; sourceTree = "<group>"; };
 		CE4642F51ACCA058000CB831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/UDLocalizable.strings; sourceTree = "<group>"; };
 		CE4642FA1ACCA98F000CB831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UDLocalizable.strings; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				CE4642F21ACC9FF5000CB831 /* UDLocalizable.strings */,
 				CE4642E61ACC3E35000CB831 /* Custom.strings */,
 				CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */,
+				CE3A93BF1ACDFDCB003957F3 /* UDMethodLocalizationTest.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3A93C01ACDFDCB003957F3 /* UDMethodLocalizationTest.m in Sources */,
 				CEF451451ACA9C0700020217 /* UDLocalizedStringsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
