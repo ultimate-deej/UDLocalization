@@ -1,4 +1,10 @@
-@interface UDLocalizedStrings : NSObject
+@protocol UDLocalizedStrings <NSObject>
+
+- (NSString *)localizedString:(NSString *)key;
+
+@end
+
+@interface UDLocalizedStrings : NSObject <UDLocalizedStrings>
 
 - (instancetype)init;
 
