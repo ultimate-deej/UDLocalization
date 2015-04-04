@@ -1,0 +1,5 @@
+"profile:title" = "My Profile";
+"profile:tab title" = "r/profile:title";
+"profile:reference to tab title" = "r/profile:tab title";
+"cyclic 1" = "r/cyclic 2";
+"cyclic 2" = "r/cyclic 1";

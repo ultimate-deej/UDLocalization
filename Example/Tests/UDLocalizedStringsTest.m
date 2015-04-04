@@ -1,4 +1,5 @@
 #import <UDLocalization.h>
+#import "UDReferencingLocalizedStrings.h"
 
 typedef id <UDLocalizedStrings>(^LocalizedStringsTransform)(id <UDLocalizedStrings>);
 
@@ -69,6 +70,30 @@ describe(@"UDLocalizedStrings", ^{
     itShouldBehaveLike(@"various scenarios for -localizedString:", @{@"transform" : ^id <UDLocalizedStrings>(id <UDLocalizedStrings> localizedStrings) {
         return localizedStrings;
     }});
+});
+
+describe(@"UDReferencingLocalizedStrings", ^{
+    __block id <UDLocalizedStrings> referencingStrings;
+    beforeAll(^{
+        UDLocalizedStrings *localizedStrings = [UDLocalizedStrings localizedStringsWithTableName:@"References"];
+        referencingStrings = [UDReferencingLocalizedStrings referencingLocalizedStringsWithLocalizedStrings:localizedStrings];
+    });
+
+    itShouldBehaveLike(@"various scenarios for -localizedString:", @{@"transform" : ^id <UDLocalizedStrings>(id <UDLocalizedStrings> localizedStrings) {
+        return [UDReferencingLocalizedStrings referencingLocalizedStringsWithLocalizedStrings:localizedStrings];
+    }});
+    specify(@"that profile:title is 'My Profile'", ^{
+        expect([referencingStrings localizedString:@"profile:tab title"]).to.equal(@"My Profile");
+    });
+    it(@"should resolve references", ^{
+        expect([referencingStrings localizedString:@"profile:tab title"]).to.equal([referencingStrings localizedString:@"profile:title"]);
+    });
+    it(@"should resolve chained references", ^{
+        expect([referencingStrings localizedString:@"profile:reference to tab title"]).to.equal([referencingStrings localizedString:@"profile:title"]);
+    });
+    it(@"should break cyclic references", ^{
+        expect([referencingStrings localizedString:@"cyclic 1"]).to.equal(@"cyclic 1");
+    });
 });
 
 SpecEnd

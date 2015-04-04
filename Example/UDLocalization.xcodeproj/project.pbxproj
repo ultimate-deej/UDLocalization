@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36EBCDB1053CFDFC68E8618E /* References.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36EBC0BBB9F0FEBB8F8E1AA3 /* References.strings */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		17F6038E016BC69275105B59 /* UDLocalization.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UDLocalization.podspec; path = ../UDLocalization.podspec; sourceTree = "<group>"; };
 		2AEB10007CD2C43D431BB953 /* libPods-UDLocalization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDLocalization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36EBC0BBB9F0FEBB8F8E1AA3 /* References.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = References.strings; sourceTree = "<group>"; };
 		47C8DAEAB22C34D7BB8853D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* UDLocalization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDLocalization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +99,7 @@
 				CE4642F21ACC9FF5000CB831 /* UDLocalizable.strings */,
 				CE4642E61ACC3E35000CB831 /* Custom.strings */,
 				CEB5E63B1ACCB4F8003C2F94 /* OnlyRu.strings */,
+				36EBC0BBB9F0FEBB8F8E1AA3 /* References.strings */,
 				CE3A93BF1ACDFDCB003957F3 /* UDMethodLocalizationTest.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -197,6 +200,7 @@
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 				CE4642E71ACC3E35000CB831 /* Custom.strings in Resources */,
 				CEB5E6391ACCB4F8003C2F94 /* OnlyRu.strings in Resources */,
+				36EBCDB1053CFDFC68E8618E /* References.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
