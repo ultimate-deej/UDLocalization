@@ -1,9 +1,11 @@
 #import <UDLocalization.h>
 
-SpecBegin(UDLocalizedStrings)
+typedef id <UDLocalizedStrings>(^LocalizedStringsTransform)(id <UDLocalizedStrings>);
+
+SharedExamplesBegin(UDLocalizedStrings)
 
 sharedExamplesFor(@"-localizedString:", ^(NSDictionary *data) {
-    UDLocalizedStrings *localizedStrings = data[@"instance"];
+    id <UDLocalizedStrings> localizedStrings = data[@"instance"];
     it(@"should localize string", ^{
         expect([localizedStrings localizedString:@"test key"]).to.equal(data[@"test key"]);
     });
@@ -12,47 +14,61 @@ sharedExamplesFor(@"-localizedString:", ^(NSDictionary *data) {
     });
 });
 
-describe(@"-localizedString:", ^{
-    itShouldBehaveLike(@"-localizedString:", @{
-            @"instance" : [UDLocalizedStrings localizedStrings],
-            @"test key" : @"english test value", // Not sure why it uses English by default
-    });
+sharedExamplesFor(@"various scenarios for -localizedString:", ^(NSDictionary *data) {
+    LocalizedStringsTransform transform = data[@"transform"];
 
-    context(@"custom strings table", ^{
+    describe(@"-localizedString:", ^{
         itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithTableName:@"Custom"],
-                @"test key" : @"custom file value",
+                @"instance" : transform([UDLocalizedStrings localizedStrings]),
+                @"test key" : @"english test value", // Not sure why it uses English by default
         });
-    });
 
-    context(@"custom language", ^{
-        itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithLanguage:@"Base"],
-                @"test key" : @"test value",
+        context(@"custom strings table", ^{
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithTableName:@"Custom"]),
+                    @"test key" : @"custom file value",
+            });
         });
-    });
 
-    context(@"custom language and table", ^{
-        itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithLanguage:@"ru" tableName:@"OnlyRu"],
-                @"test key" : @"pseudo russian",
+        context(@"custom language", ^{
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithLanguage:@"Base"]),
+                    @"test key" : @"test value",
+            });
         });
-        itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithLanguage:@"Base" tableName:@"OnlyRu"],
-                @"test key" : @"test key",
-        });
-        itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithLanguage:nil tableName:@"OnlyRu"],
-                @"test key" : @"test key",
-        });
-    });
 
-    context(@"when explicit bundle is being used", ^{
-        itShouldBehaveLike(@"-localizedString:", @{
-                @"instance" : [UDLocalizedStrings localizedStringsWithBundle:[NSBundle bundleForClass:[UDLocalizedStrings class]] tableName:@"Custom"],
-                @"test key" : @"custom file value",
+        context(@"custom language and table", ^{
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithLanguage:@"ru" tableName:@"OnlyRu"]),
+                    @"test key" : @"pseudo russian",
+            });
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithLanguage:@"Base" tableName:@"OnlyRu"]),
+                    @"test key" : @"test key",
+            });
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithLanguage:nil tableName:@"OnlyRu"]),
+                    @"test key" : @"test key",
+            });
+        });
+
+        context(@"when explicit bundle is being used", ^{
+            itShouldBehaveLike(@"-localizedString:", @{
+                    @"instance" : transform([UDLocalizedStrings localizedStringsWithBundle:[NSBundle bundleForClass:[UDLocalizedStrings class]] tableName:@"Custom"]),
+                    @"test key" : @"custom file value",
+            });
         });
     });
+});
+
+SharedExamplesEnd
+
+SpecBegin(UDLocalizedStrings)
+
+describe(@"UDLocalizedStrings", ^{
+    itShouldBehaveLike(@"various scenarios for -localizedString:", @{@"transform" : ^id <UDLocalizedStrings>(id <UDLocalizedStrings> localizedStrings) {
+        return localizedStrings;
+    }});
 });
 
 SpecEnd
