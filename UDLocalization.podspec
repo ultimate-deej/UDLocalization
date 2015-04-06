@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = "UDLocalization"
   s.version          = "0.1.0"
-  s.summary          = "Objective-C localization library"
-  s.description      = "Objective-C localization library that swizzles arbitrary string properties or setters (methods that take a single NSString argument)"
+  s.summary          = "Objective-C localization library for iOS"
+  s.description      = "Objective-C localization library for iOS that swizzles arbitrary string properties or setters (methods that take a single NSString argument)"
   s.homepage         = "https://github.com/ultimate-deej/UDLocalization"
   s.license          = 'MIT'
   s.author           = { "Maxim Naumov" => "ultimate.deej@gmail.com" }
