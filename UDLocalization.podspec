@@ -21,4 +21,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'Pod/MethodLocalization/*.{h,m}'
     ss.dependency 'UDLocalization/LocalizedStrings'
   end
+
+  s.subspec 'ViewLocalization' do |ss|
+    ss.source_files = 'Pod/ViewLocalization/*.{h,m}'
+    ss.dependency 'UDLocalization/MethodLocalization'
+  end
 end

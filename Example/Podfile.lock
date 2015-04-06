@@ -4,9 +4,12 @@ PODS:
   - UDLocalization (0.1.0):
     - UDLocalization/LocalizedStrings (= 0.1.0)
     - UDLocalization/MethodLocalization (= 0.1.0)
+    - UDLocalization/ViewLocalization (= 0.1.0)
   - UDLocalization/LocalizedStrings (0.1.0)
   - UDLocalization/MethodLocalization (0.1.0):
     - UDLocalization/LocalizedStrings
+  - UDLocalization/ViewLocalization (0.1.0):
+    - UDLocalization/MethodLocalization
 
 DEPENDENCIES:
   - Expecta
@@ -20,6 +23,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Specta: a353759f073ffcc0a365b782fe4aaeac064c03c6
-  UDLocalization: a9dc774fdc52d6c73c666193ee20565ae56fbaff
+  UDLocalization: c44c4a7086610d678471a74c1ab89b4d67a0bf79
 
 COCOAPODS: 0.36.3
